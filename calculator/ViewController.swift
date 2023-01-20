@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     if true {
       label.text = "\(sum)"
       numberArray.removeAll()
+      number1 = ""
     }
   }
 
