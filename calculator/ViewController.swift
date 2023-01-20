@@ -9,55 +9,52 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  var sayi: String = ""
-  var sayi2:String = ""
-  var sayiDizi = [String]()
+  var number1: String = ""
+  var number2:String = ""
+  var numberArray = [String]()
   
-
-  @IBOutlet weak var labelSayi: UILabel!
+  @IBOutlet weak var label: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    labelSayi.text = ""
-    
+    label.text = ""
   }
   
-  @IBAction func buttonEsittir(_ sender: Any) {
+  @IBAction func buttonEquals(_ sender: Any) {
     
-    var toplam = 0
+    var sum = 0
     
-    sayi2 = labelSayi.text!
-    sayiDizi.append(sayi2)
+    number2 = label.text!
+    numberArray.append(number2)
   
-    for number in sayiDizi {
-        toplam += Int(number)!
+    for number in numberArray {
+        sum += Int(number)!
     }
     if true {
-      labelSayi.text = "\(toplam)"
-      sayiDizi.removeAll()
+      label.text = "\(sum)"
+      numberArray.removeAll()
     }
   }
-  
-  @IBAction func buttonTopla(_ sender: Any) {
-    sayi2 = labelSayi.text!
-    sayiDizi.append(sayi2)
-    sayi = ""
-    labelSayi.text = " "
+
+  @IBAction func buttonSum(_ sender: Any) {
+    number2 = label.text!
+    numberArray.append(number2)
+    number1 = ""
+    label.text = " "
   }
   
-  @IBAction func buttonSifirla(_ sender: Any) {
-     sayi = ""
-     sayi2 = ""
-     sayiDizi = []
-     labelSayi.text = ""
+  @IBAction func buttonReset(_ sender: Any) {
+    number1 = ""
+    number2 = ""
+    numberArray = []
+    label.text = ""
   }
-  
-  @IBAction func buttonDurum(_ sender: UIButton) {
-      sayi += String(sender.tag)
-      labelSayi.text = "\(sayi)"
-    }
- }
+
+  @IBAction func buttonStatus(_ sender: UIButton) {
+    number1 += String(sender.tag)
+    label.text = "\(number1)"
+  }
+}
   
   
 
