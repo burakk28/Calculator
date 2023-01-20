@@ -26,14 +26,15 @@ class ViewController: UIViewController {
     
     number2 = label.text!
     numberArray.append(number2)
-  
-    for number in numberArray {
+    if !numberArray.isEmpty {
+      for number in numberArray {
         sum += Int(number)!
-    }
-    if true {
-      label.text = "\(sum)"
-      numberArray.removeAll()
-      number1 = ""
+      }
+      if true {
+        label.text = "\(sum)"
+        numberArray.removeAll()
+        number1 = ""
+      }
     }
   }
 
