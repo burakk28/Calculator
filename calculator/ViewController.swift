@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     number2 = label.text!
     numberArray.append(number2)
     number1 = ""
-    label.text = " "
+    label.text = ""
   }
   
   @IBAction func buttonReset(_ sender: Any) {
@@ -57,7 +57,5 @@ class ViewController: UIViewController {
     label.text = "\(number1)"
   }
 }
-  
-  
 
 
